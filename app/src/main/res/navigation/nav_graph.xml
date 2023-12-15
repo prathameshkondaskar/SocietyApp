@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_auth"
+    app:startDestination="@id/enterMobileFragment">
+
+    <fragment
+        android:id="@+id/enterMobileFragment"
+        android:name="com.example.societyapp.presentation.enterMobile.EnterMobileFragment"
+        android:label="fragment_send_otp"
+        tools:layout="@layout/fragment_enter_mobile" >
+        <action
+            android:id="@+id/action_enterMobileFragment_to_verificationOtpFragment"
+            app:destination="@id/verificationOtpFragment"
+            app:popUpTo="@+id/enterMobileFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/verificationOtpFragment"
+        android:name="com.example.societyapp.presentation.verifyOtp.VerificationOtpFragment"
+        android:label="fragment_verification_otp"
+        tools:layout="@layout/fragment_verification_otp" >
+        <action
+            android:id="@+id/action_verificationOtpFragment_to_homePageFragment"
+             />
+        <argument
+            android:name="verification"
+            app:argType="string"
+            android:defaultValue='' />
+    </fragment>
+
+</navigation>

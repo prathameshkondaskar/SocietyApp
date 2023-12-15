@@ -3,12 +3,14 @@ plugins {
     id("org.jetbrains.kotlin.android")
     kotlin ("kapt")
     id("com.google.dagger.hilt.android")
+    id("com.google.gms.google-services")
+    id("androidx.navigation.safeargs.kotlin")
 
 }
 
 android {
     namespace = "com.example.societyapp"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.societyapp"
@@ -40,6 +42,9 @@ android {
         viewBinding = true
         dataBinding = true
     }
+    kapt {
+        correctErrorTypes = true
+    }
 
 }
 
@@ -49,12 +54,13 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.8.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("com.google.firebase:firebase-firestore-ktx:24.10.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     //Daagger 2
-    val hilt_version="2.44"
+    val hilt_version="2.48"
     implementation ("com.google.dagger:hilt-android:$hilt_version")
     kapt("com.google.dagger:hilt-android-compiler:$hilt_version")
 
@@ -78,6 +84,31 @@ dependencies {
 
     implementation ("com.google.code.gson:gson:2.9.0")
 
-    implementation ("androidx.activity:activity-ktx:1.7.2")
+    implementation ("androidx.activity:activity-ktx:1.8.1")
+
+    // Import the Firebase BoM
+    implementation(platform("com.google.firebase:firebase-bom:32.3.1"))
+
+
+    // TODO: Add the dependencies for Firebase products you want to use
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation("com.google.firebase:firebase-analytics-ktx")
+    implementation("com.google.firebase:firebase-auth-ktx")
+
+    //Navigation component
+    implementation ("androidx.navigation:navigation-fragment-ktx:2.7.5")
+    implementation ("androidx.navigation:navigation-ui-ktx:2.7.5")
+
+    //Android Ktx
+    implementation ("androidx.navigation:navigation-fragment-ktx:2.7.5")
+
+    //OTP BOX
+    implementation ("com.github.GoodieBag:Pin-view:v1.5")
+    implementation ("io.github.chaosleung:pinview:1.4.4")
+
+
+    implementation ("com.github.User:Repo:Tag")
+
+
 
 }

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_gravity="center"
+            android:text="Enter verification code"
+            android:textColor="@color/black"
+            android:textSize="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:text="We have sent you a 6 digit verification code on"
+            android:textColor="@color/lightGrey" />
+        <TextView
+            android:id="@+id/tvMobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:text="+91 9969123123"
+            android:textColor="@color/black" />
+
+        <!--<EditText-->
+        <!--android:id="@+id/editTextCode"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="28dp"-->
+        <!--android:layout_marginRight="40dp"-->
+        <!--android:backgroundTint="@color/lightGrey"-->
+        <!--android:inputType="textCapCharacters"-->
+        <!--android:textColor="@color/black" />-->
+
+
+        <com.chaos.view.PinView
+            android:id="@+id/firstPinView"
+            style="@style/PinWidget.PinView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:cursorVisible="true"
+            android:hint="Hint."
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:inputType="text"
+            android:itemBackground=""
+            android:padding="5dp"
+            android:textColor="#00000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:cursorColor="#000000"
+            app:cursorWidth="2dp"
+            app:hideLineWhenFilled="true"
+            app:itemCount="6"
+            app:itemHeight="48dp"
+            app:itemRadius="4dp"
+            app:itemSpacing="4dp"
+            app:itemWidth="48dp"
+            app:lineColor="#000000"
+            app:lineWidth="2dp"
+            app:viewType="rectangle" />
+
+        <TextView
+            android:id="@+id/tvTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00.30"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/buttonEnter"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:text="Enter"
+            android:textAllCaps="false"
+            android:background="@drawable/background_rounded_button"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:visibility="visible"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearNoInternet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:gravity="center"
+        android:background="#F6F6F6">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <Button
+            android:id="@+id/buttonTryAgain"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_rounded_button"
+            android:textColor="@color/white"
+            android:text="Try Again"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            android:fontFamily="@font/avenir_lt_45_book_2"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

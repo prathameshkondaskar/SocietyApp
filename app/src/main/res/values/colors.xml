@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+        <color name="colorPrimary">#546e7a</color>
+        <color name="colorPrimaryDark">#29434e</color>
+        <color name="colorAccent">#819ca9</color>
+
+        <color name="colorSecondary">#212121</color>
+        <color name="colorSecondaryDark">#000000</color>
+        <color name="colorSecondaryAccent">#484848</color>
+
+        <color name="black">#000000</color>
+        <color name="lightGrey">#707070</color>
+        <color name="greyLight">#c5c5c5</color>
+        <color name="dark_gray">#787878</color>
+
+        <!-- YELLOW GRADIENT -->
+        <color name="yellowGradientStart">#FFC837</color>
+        <color name="yellowGradientEnd">#FF8008</color>
+        <color name="white">#FFFFFF</color>
+
+        <color name="red">#FF0000</color>
+
+        <color name="offWhite">#FAF6F6</color>
+        <color name="grey">#808080</color>
+
+        <color name="baige">#d6d6c2</color>
+        <color name="colorRipple">#B082A4C4</color>
+
 </resources>

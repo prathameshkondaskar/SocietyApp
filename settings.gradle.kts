@@ -3,6 +3,13 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
+        maven {
+            url = uri("https://jitpack.io")
+            credentials {
+                username = "prathamesh.kondaskar@gmail.com"
+                password = "Patya007.pk"
+            }
+        }
     }
 }
 dependencyResolutionManagement {
@@ -10,9 +17,17 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven {
+            url = uri("https://jitpack.io")
+            credentials {
+                username = "prathamesh.kondaskar@gmail.com"
+                password = "Patya007.pk"
+            }
+        }
+        maven { url=uri ("https://maven.google.com/")
+        }
     }
 }
 
 rootProject.name = "SocietyApp"
 include(":app")
- 
